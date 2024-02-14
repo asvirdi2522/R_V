@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YESSOOO haan ho gyi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5e1ea; /* Light pink background color */
+    }
+    /* Add any additional styles for the hint page */
+    h1 {
+      margin-top: -80px;
+      color: #ff69b4; /* Pink color for the hint text */
+      cursor: pointer; /* Change cursor to pointer for interactive feel */
+      transition: color 0.3s ease; /* Smooth transition effect for color change */
+    }
+    h1:hover {
+      color: #ff1493; /* Change color on hover */
+    }
+    #beeImage {
+        border-radius: 10px;
+        margin-left: 40%;
+      display: block; /* Initially hide the bee image */
+      max-width: 300px; /* Adjust image size as needed */
+      margin-top: 20px;
+    }
+    #hintYes {
+      position: fixed;
+      bottom: 11px;
+      right: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: red;
+    }
+    #hintYes:hover {
+      color: rgb(204, 185, 185);
+    }
+    #hintNo {
+      position: fixed;
+      bottom: 11px;
+      right: 40%;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: red;
+    }
+    #hintNo:hover {
+      color: rgb(204, 185, 185);
+    }
+  </style>
+</head>
+<body>
+    <h1 onclick="changeContent()">GOOD CHOICE BABEUEUEU</h1>
+    <img id="beeImage" src="yes.jpg" alt="Bee Image">
+    <h1 style="margin-top: 50px;">Mujhe callo/texto krke ILU bol skte ho ab &#128521;</h1>
+    <h1 style="margin-top: 10px;">(VAISE I LOVE YOU JANI)</h1>
+      <!-- <a id="hintYes" href="yes.html" target="_blank">YESSSSSS</a> -->
+      <!-- <a id="hintNo" href="no.html" target="_blank">NOU</a> -->
+  <!-- Add any hint text or content here -->    
+  <script>
+   function changeContent() {
+      var hintText = document.getElementsByTagName('h1')[0];
+      var beeImage = document.getElementById('beeImage');
+
+      if (hintText.textContent === "GOOD CHOICE BABEUEUEU") {
+        hintText.textContent = "BOLOOO ILU, CLICKO KRVA LO JANI SE";
+        beeImage.style.display = 'block'; // Show the bee image
+      }
+    }
+  </script>
+</body>
+</html>

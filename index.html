@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Andar ghuso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5e1ea; /* Light pink background color */
+    }
+    #loginSection {
+      background-color: #fff; /* White background for login section */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Box shadow for a slight depth effect */
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    input {
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      width: calc(100% - 22px);
+    }
+    #errorMessage {
+      color: red;
+      margin-top: 10px;
+    }
+    #welcomeSection {
+      display: none;
+      margin-top: 30px;
+      background-color: #f5e1ea; /* Set welcome section color to black */
+      color: #fff; /* Set text color to white */
+      position: fixed;
+      top: -30px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+       z-index: 9999;
+      background-image: url('r.png'); /* Blinging stars background */
+      background-size: cover;
+    }
+    h2 {
+      margin-top: 100px;
+      color: #ff69b4; /* Pink color for the welcome text */
+    }
+    #km
+    {
+      margin: 100px;
+    }
+    #hintLink {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: red;
+    }
+    #hintLink:hover {
+      color: rgb(204, 185, 185);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="loginSection" class="mt-4">
+      <p>PASSWORD<br><span style='font-size:100px;'>&#128548;</span>
+        </p>
+      <input type="password" id="passwordInput" class="form-control" placeholder="Enter password">
+      <p id="errorMessage"></p>
+    </div>
+    <div id="welcomeSection" class="mt-4">
+      <h2>I hope password ke liye idhar udhar na dekha ho janiu ne <br> Khair CLICKO!!!</h2>
+      <div id="km">
+  <a id="hintLink" href="val.html" target="_blank">YAHAN CLICKO</a>
+</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("passwordInput").addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+
+    function checkPassword() {
+      var enteredPassword = document.getElementById("passwordInput").value;
+      var storedPassword = "oldport"; // Replace with the desired password
+
+      if (enteredPassword === storedPassword) {
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("welcomeSection").style.display = "block";
+        document.body.style.backgroundColor = "#000"; /* Set whole page color to black */
+      } else {
+        document.getElementById("errorMessage").textContent = "Incorrect password. Please try again.";
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
